@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:composite="http://java.sun.com/jsf/composite"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>Medidas</title>
+	<h:outputStylesheet library="css" name="bootstrap.min.css" />
+	<h:outputStylesheet library="css" name="formulario.css" />
+	<h:outputStylesheet library="css" name="font-awesome.min.css" />
+</h:head>
+<h:body>
+	<!-- INicio da NAVBAR -->
+	<div class="navbar navbar-inverse navbar-inner navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display/ toggle faz agrupamento do menu para ser vizualizado no celular-->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/inicio">Academia</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false"><i class="fas fa-user fa-lg"></i> <span
+							class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Minha Conta</a></li>
+							<li><a href="administracao.xhtml">Administração</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Efetuar LogOff</a></li>
+						</ul></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</div>
+	<!-- / FIM DA NAVBAR -->
+
+	<h:messages layout="table" errorStyle="color: red"
+		infoStyle="color: green" warnStyle="color: orange"
+		fatalStyle="color: gray" showSummary="false" showDetail="true" />
+
+	<div class="container">
+		<h1>Perímetros</h1>
+		<h:form id="frmMedida" class="formulario">
+			<div class="form-group pull-right">
+				<h:outputText rendered="#{medidaControle.mensagem!=null}"
+					class="alert alert-info "
+					value="#{medidaControle.mensagem}" />
+			</div>
+			<div class="col-xs-12 col-lg-12">
+				<div class="col-xs-12 col-lg-6">
+					<div class="form-group">
+						<h:outputLabel value="Estatura" />
+						<h:inputText class="form-control"
+							value="#{medidaControle.medida.estatura}" />
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Massa" />
+						<h:inputText class="form-control"
+							value="#{medidaControle.medida.massa}" />
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Torax" />
+						<h:inputText class="form-control"
+							value="#{medidaControle.medida.torax}" />
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Cintura" />
+						<h:inputText class="form-control"
+							value="#{medidaControle.medida.cintura}" />
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Abdomen" />
+						<h:inputText class="form-control"
+							value="#{medidaControle.medida.abdomen}" />
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Quadril" />
+						<h:inputText class="form-control"
+							value="#{medidaControle.medida.quadril}" />
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Coxa Media Direita" />
+						<h:inputText class="form-control"
+							value="#{medidaControle.medida.coxaMediaDireita}" />
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Coxa Media Esquerda" />
+						<h:inputText class="form-control"
+							value="#{medidaControle.medida.coxaMediaEsquerda}" />
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Pescoço" />
+						<h:inputText class="form-control"
+							value="#{medidaControle.medida.pescoco}" />
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-lg-6">
+					<div class="form-group">
+						<h:outputLabel value="Panturrilha Direita" />
+						<h:inputText class="form-control"
+							value="#{medidaControle.medida.panturrilhaDireita}" />
+					</div>
+
+					<div class="form-group">
+						<h:outputLabel value="Panturrilha Esquerda" />
+						<h:inputText class="form-control"
+							value="#{medidaControle.medida.panturrilhaEsquerda}" />
+					</div>
+
+					<!-- BRAÇO -->
+					<div class="form-group">
+						<h:outputLabel value="Braco Direito Relaxado" />
+						<h:inputText class="form-control"
+							value="#{medidaControle.medida.bracoDireitoRelaxado}" />
+					</div>
+
+					<div class="form-group">
+						<h:outputLabel value="Braco Esquerdo Relaxado" />
+						<h:inputText class="form-control"
+							value="#{medidaControle.medida.bracoEsquerdoRelaxado}" />
+					</div>
+
+					<div class="form-group">
+						<h:outputLabel value="Braco Direito Contraido" />
+						<h:inputText class="form-control"
+							value="#{medidaControle.medida.bracoDireitoContraido}" />
+					</div>
+
+					<div class="form-group">
+						<h:outputLabel value="Braco Esquerdo Contraido" />
+						<h:inputText class="form-control"
+							value="#{medidaControle.medida.bracoEsquerdoContraido}" />
+					</div>
+
+					<!--final BRAÇO -->
+
+					<!--ANTEBRAÇO -->
+					<div class="form-group">
+						<h:outputLabel value="Antebraço Direito" />
+						<h:inputText class="form-control"
+							value="#{medidaControle.medida.antebracoDireito}" />
+					</div>
+
+					<div class="form-group">
+						<h:outputLabel value="Antebraço Esquerdo" />
+						<h:inputText class="form-control"
+							value="#{medidaControle.medida.antebracoEsquerdo}" />
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Cliente" />
+
+						<h:selectOneMenu class="form-control"
+							value="#{medidaControle.medida.cliente}"
+							converter="#{clienteConverter}">
+							<f:selectItem noSelectionOption="true" itemValue="null"
+								itemLabel=".: Selecione o Cliente :. " />
+							<f:selectItems value="#{medidaControle.clientes}" var="cliente1"
+								itemLabel="#{cliente1.nome}" />
+						</h:selectOneMenu>
+					</div>
+
+				</div>
+			</div>
+
+
+			<div class="col-xs-12 col-lg-12">
+				<div class="col-xs-12 col-sm-6 col-lg-6">
+					<h:commandButton action="#{medidaControle.salvarMedida()}"
+						class="btn btn-default btn-lg" value="Cadastrar">
+						<f:ajax execute="frmMedida" render="@all" />
+					</h:commandButton>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-lg-6">
+					<h:commandButton rendered="#{medidaControle.modoEdicao}"
+						action="#{medidaControle.cancelar()}" value="Cancelar"
+						class="btn btn-danger btn-lg">
+						<f:ajax render="frmMedida" />
+					</h:commandButton>
+
+
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="table-responsive">
+					<h:dataTable value="#{medidaControle.medidas}" class="table"
+						var="medida" id="dtMedida">
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="Torax" />
+							</f:facet>
+							<h:outputLabel value="#{medida.torax}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="Cintura" />
+							</f:facet>
+							<h:outputLabel value="#{medida.cintura}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="Abdomen" />
+							</f:facet>
+							<h:outputLabel value="#{medida.abdomen}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="Quadril" />
+							</f:facet>
+							<h:outputLabel value="#{medida.quadril}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="Coxa Esquerda" />
+							</f:facet>
+							<h:outputLabel value="#{medida.coxaMediaEsquerda}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="Aluno" />
+							</f:facet>
+							<h:outputLabel value="#{medida.cliente.nome}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="opções" />
+							</f:facet>
+							<h:commandButton action="#{medidaControle.excluir(medida)}"
+								title="Excluir" onclick="return window.confirm('Tem Certeza?')"
+								class="btn btn-danger" value="Excluir">
+
+								<f:ajax render="frmMedida:dtMedida" />
+								<!-- f:ajax Atualizar pagina(lista de medidas)-->
+							</h:commandButton>
+
+							<h:commandButton action="#{medidaControle.alterarMedida(medida)}"
+								title="Editar" value="Editar" class="btn btn-default">
+								<f:ajax render="frmMedida" />
+								<!-- f ajax Atualizar pagina(formulário) -->
+							</h:commandButton>
+						</h:column>
+					</h:dataTable>
+				</div>
+			</div>
+		</h:form>
+	</div>
+	<script src="resources/js/jquery-3.2.1.min.js" />
+	<script src="resources/js/bootstrap.min.js" />
+	<script src="resources/js/fontawesome-all.min.js" />
+	<script src="resources/js/main.js" />
+</h:body>
+</html>

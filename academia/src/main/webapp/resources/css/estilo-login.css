@@ -1,0 +1,147 @@
+@font-face{
+    font-family: 'Aerovias Brasil NF';
+    src: local("/fonts/aerovias-brasil-nf.regular.otf"), url("../fonts/aerovias-brasil-nf.regular.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+.navbar label{
+    font-size: 22px;
+}
+
+
+.form-login{/* criar uma caixa onde vão estar os campos de preenchimento */
+    font-family: Aerovias Brasil NF;
+    padding: center;
+    max-width: 500px;
+    margin-top: 148px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 160px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding: 10px;
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: aquamarine;
+
+	background: transparent;
+  /*  background: rgb(32, 64, 105);*/
+}
+
+
+.form-label{
+    color: #bfcdd8;
+    font-size: 20px;
+    font-weight: 100;
+
+}
+.form-group .borda{
+    border-width: 6px;
+    border-style:double;
+    border-color: aqua;
+    border-radius: 20px;
+}
+.form-group .label{
+    text-align: center;
+    color: #bfcdd8;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.form-group .btn-primary{
+    font-size: 25px;
+    border-radius: 20px;
+    background: #172b46;
+}
+.navbar-inner{
+    font-family: Aerovias Brasil NF;
+    /* opacity:0.50; efeito para imbassar*/
+    /*opacity:0.30;*/
+    background:transparent;
+    padding-bottom: 38px;
+    border-width:inherit;
+    border-bottom-color:rgba(0, 157, 255, 0.58);
+}
+.navbar-inverse .navbar-brand{
+    color: #1a326e;
+}
+.page-header{
+    margin-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* PLANOS DE FUNDO */
+.tela-fundo-login{
+    background: url("../imgs/Login.jpg");
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    display: visible>=768px;
+}
+.tela-fundo2{
+    background:black;
+   
+}
+/* FIM DOS PLANOS DE FUNDO */
+
+section{/* Configurações para tag section */
+   
+    padding-top: 0px;  /*Distância da parte  superior */
+    padding-bottom: 0px; /*Distância da parte inferior */
+    min-height: 90vh; /*Altura mínima */
+
+}
+body{
+    position: relative;
+}
+/* RECONFIGURANDO TAGS */
+div .page-header{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+div .form-group{
+    padding-bottom: 0px;
+}
+/* LOCALIZAÇÃO DOS CSS */
+.input-lg {
+    height: 26px;
+    padding: 20px 16px;
+    font-size: 22px;
+    line-height: 1.3333333;
+    border-radius: 0px;
+}
+/* LOCALIZAÇÃO DOS CSS */
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 22px;
+    line-height: 0.428571;
+    color: #bfcdd8;
+    background-color: #172b46;
+    background-image: none;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.form-horizontal .control-label {
+    font-weight: 200px;
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+h2{
+    color: #bfcdd8;
+    font-size: 40px;
+    margin-top:20px; 
+}

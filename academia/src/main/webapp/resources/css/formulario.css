@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+/* FONTES */
+@font-face {
+	font-family: 'Classic Robot';
+	src: url("../resources/fonte_Robot/Classic Robot.otf");
+	font-weight: normal;
+	font-style: normal;
+}
+.navbar-inner {
+
+    font-family: Classic Robot;
+    opacity:0.80; /*efeito para imbassar;*/
+    /*opacity:0.30;*/
+    background:black;
+    border-width:thin;
+    border-bottom-color:#009dff;
+}
+
+.navbar-brand{  
+    font-size: 30px;
+    padding-bottom: 20px;
+    font-weight: 200;
+}
+body {
+	font-family: Classic Robot;
+	background: url("../resources/imgs/Background Limpo.jpg");
+	padding-bottom: 20px;
+	padding-top: 42px;
+	font-size: 20px;	
+	margin: 20px;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	min-height: 100vh;
+}
+
+label {
+	color: #E0FFFF;
+	font-weight: inherit;
+}
+
+div.panel.panel-default {
+	color: #000000;
+	font-weight: inherit;
+}
+
+input {
+	font-size: 30px;
+}
+
+h1 {
+	color: #E0FFFF;
+}
+
+h2 {
+	font-weight: inherit;
+}
+
+table {
+	font-weight: inherit;
+	border-radius: 20px;
+}
+
+.btn-group-lg>.btn, .btn-lg {
+	padding: 10px 16px;
+	font-size: 26px;
+	line-height: 0.777777;
+	border-radius: 9px;
+}
+
+.btn-primary {
+	color: #fff;
+	background-color: #337ab7;
+	border-color: #2e6da4;
+}
+/*	CSS DO CHECKBOX	*/
+input.regular-checkbox {
+	padding: 20px;
+}
+
+span.label.label-default.label-lg {
+	font-style: inherit;
+}

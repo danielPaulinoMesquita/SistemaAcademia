@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'Classic Robot';
+    src: local("/_fonts/fonte_Robot/Classic Robot.otf"), url("../_fonts/fonte_Robot/Classic Robot.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.navbar-inner {
+
+    font-family: Classic Robot;
+    /* opacity:0.50; efeito para imbassar*/
+    /*opacity:0.30;*/
+    background:hsla(212, 25%, 22%, 0.69);
+    border-width:thin;
+    border-bottom-color:#009dff;
+}
+
+.navbar-brand{  
+
+    font-size: 30px;
+    padding-bottom: 20px;
+    font-weight: 200;
+}
+.ul-fonte{
+    font-size: 20px;
+    font-weight: 130px;
+}
+.p-fonte-botao{
+    font-size: 20px;
+}
+.servicos img{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    height: 200px;
+}
+
+.div_colorida{
+    margin-top: 0;
+    background:  url("../imgs/123.jpg");
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.div_fundo{
+    background: url(../imgs/Background.jpg);
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;}
+}
+.div_fundo p{
+    font-family:Classic Robot;
+    color: #c0ccd8;
+}
+.div_fundo h1{
+    color:#c0ccd8;
+}
+.container{
+    font-family:Classic Robot;
+}
+
+/*RECONFIGURANDO TAGS    */
+.navbar-inverse .navbar-nav>li>a{
+    color: #c0ccd8;
+}
+
+.navbar-inverse .navbar-brand{
+     color: #c0ccd8;
+}
+section{/* Configurações para tag section */
+    padding-top: 30px;  /*Distância da parte
+    superior */
+    padding-bottom: 10px; /*Distância da parte inferior */
+    min-height: 100vh; /*Altura mínima */
+
+}
+h1{
+    font-family:Classic Robot;
+}
+h2{
+    font-family:Classic Robot;
+
+}
+p{
+    font-family:Classic Robot;  
+    font-size: 16px;
+}
+h3{
+    font-family:Classic Robot;
+}
+body{
+    background: center;
+
+}
+/* CONFIGURAÇÕES FOOTERS */
+footer{
+    padding-bottom: 0px;
+    border-bottom: 10px;
+    padding-top: 20px;
+    min-height:  100px;
+    background: black;
+
+}
+footer ul li{
+    list-style-type: none;
+
+}
+footer ul li a{
+    font-family:Classic Robot;
+    color: rgba(120, 224, 224, 0.79);
+    font-size: 16px;
+
+}
+footer .thumbnail{
+    background: black;
+    border-color: black;
+
+}
+footer .thumbnail img{
+    height: 80px;
+}
+
+

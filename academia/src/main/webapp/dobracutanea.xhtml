@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Dobras Cutaneas</title>
+	<h:outputStylesheet library="css" name="bootstrap.min.css" />
+	<h:outputStylesheet library="css" name="formulario.css" />
+	<h:outputStylesheet library="css" name="font-awesome.min.css" />
+</h:head>
+<h:body>
+	<!-- INicio da NAVBAR -->
+	<div class="navbar navbar-inverse navbar-inner navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display/ toggle faz agrupamento do menu para ser vizualizado no celular-->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/inicio">Academia</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+
+
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false"><i class="fas fa-user fa-lg"></i> <span
+							class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Minha Conta</a></li>
+							<li><a href="administracao.xhtml">Administração</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Efetuar LogOff</a></li>
+						</ul></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</div>
+	<!-- / FIM DA NAVBAR -->
+	<h1>Dobras Cutaneas</h1>
+
+	<!-- INICIO FORMULÁRIO -->
+	<h:form id="frmDobra" class="formulario">
+		<div class="form-group pull-right">
+			<h:outputText rendered="#{dobraCutaneaControle.mensagem!=null}"
+				class="alert alert-info"
+				value="#{dobraCutaneaControle.mensagem}" />
+		</div>
+		<div class="col-xs-12 col-lg-12">
+			<div class="col-xs-12 col-lg-6">
+				<div class="form-group">
+					<h:outputLabel value="Tricipital" />
+					<h:inputText class="form-control"
+						value="#{dobraCutaneaControle.dobracutanea.tricipital}" />
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="Bicipital" />
+					<h:inputText class="form-control"
+						value="#{dobraCutaneaControle.dobracutanea.bicipital}" />
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="Subescapular" />
+					<h:inputText class="form-control"
+						value="#{dobraCutaneaControle.dobracutanea.subescapular}" />
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="Toracica" />
+					<h:inputText class="form-control"
+						value="#{dobraCutaneaControle.dobracutanea.toracica}" />
+				</div>
+
+			</div>
+
+			<div class="col-xs-12 col-lg-6">
+				<div class="form-group">
+					<h:outputLabel value="Axilar Média" />
+					<h:inputText class="form-control"
+						value="#{dobraCutaneaControle.dobracutanea.axilarMedia}" />
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="Supral Liaca" />
+					<h:inputText class="form-control"
+						value="#{dobraCutaneaControle.dobracutanea.supraIliaca}" />
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="Abdominal" />
+					<h:inputText class="form-control"
+						value="#{dobraCutaneaControle.dobracutanea.abdominal}" />
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="Coxa" />
+					<h:inputText class="form-control"
+						value="#{dobraCutaneaControle.dobracutanea.coxa}" />
+				</div>
+				<!-- button para selecionar o cliente ou aluno avaliado-->
+				<div class="form-group">
+					<h:outputLabel value="Cliente" />
+
+					<h:selectOneMenu class="form-control"
+						value="#{dobraCutaneaControle.dobracutanea.cliente}"
+						converter="#{clienteConverter}">
+						<f:selectItem noSelectionOption="true" itemValue="null"
+							itemLabel=".: Selecione o Cliente :. " />
+						<f:selectItems value="#{dobraCutaneaControle.clientes}"
+							var="cliente1" itemLabel="#{cliente1.nome}" />
+					</h:selectOneMenu>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- FIM DO FORM -->
+		<div class="col-xs-12 col-lg-12">
+			<div class="col-xs-12 col-sm-6 col-lg-6">
+				<h:commandButton action="#{dobraCutaneaControle.salvarDobra()}"
+					class="btn btn-default btn-lg" value="Cadastrar">
+					<f:ajax execute="frmDobra" render="@all" />
+				</h:commandButton>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-lg-6">
+				<h:commandButton rendered="#{dobraCutaneaControle.modoEdicao}"
+					action="#{dobraCutaneaControle.cancelar()}" value="Cancelar"
+					class="btn btn-danger btn-lg">
+					<f:ajax render="frmDobra" />
+				</h:commandButton>
+			</div>
+		</div>
+		<!-- Inicio do DataTable -->
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="table-responsive">
+				<h:dataTable value="#{dobraCutaneaControle.dobrascutaneas}"
+					class="table" var="dobra" id="dtDobra">
+					<h:column>
+						<f:facet name="header">
+							<h:outputLabel value="tricipital" />
+						</f:facet>
+						<h:outputLabel value="#{dobra.tricipital}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputLabel value="bicipital" />
+						</f:facet>
+						<h:outputLabel value="#{dobra.bicipital}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputLabel value="subescapular" />
+						</f:facet>
+						<h:outputLabel value="#{dobra.subescapular}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputLabel value="toracica" />
+						</f:facet>
+						<h:outputLabel value="#{dobra.toracica}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputLabel value="axilarMedia" />
+						</f:facet>
+						<h:outputLabel value="#{dobra.axilarMedia}" />
+					</h:column>
+
+					<h:column>
+						<f:facet name="header">
+							<h:outputLabel value="supraIliaca" />
+						</f:facet>
+						<h:outputLabel value="#{dobra.supraIliaca}" />
+					</h:column>
+
+					<h:column>
+						<f:facet name="header">
+							<h:outputLabel value="abdominal" />
+						</f:facet>
+						<h:outputLabel value="#{dobra.abdominal}" />
+					</h:column>
+
+					<h:column>
+						<f:facet name="header">
+							<h:outputLabel value="coxa" />
+						</f:facet>
+						<h:outputLabel value="#{dobra.coxa}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputLabel value="Aluno" />
+						</f:facet>
+						<h:outputLabel value="#{dobra.cliente.nome}" />
+					</h:column>
+
+					<h:column>
+						<f:facet name="header">
+							<h:outputLabel value="opções" />
+						</f:facet>
+						<h:commandButton action="#{dobraCutaneaControle.excluir(dobra)}"
+							title="Excluir" onclick="return window.confirm('Tem Certeza?')"
+							class="btn btn-danger btn-block" value="Excluir">
+
+							<f:ajax render="@all" />
+							<!-- f:ajax Atualizar pagina(lista de medidas)-->
+						</h:commandButton>
+
+						<h:commandButton
+							action="#{dobraCutaneaControle.alterarDobra(dobra)}"
+							title="Editar" value="Editar" class="btn btn-default btn-block">
+							<f:ajax render="frmDobra" />
+							<!-- f ajax Atualizar pagina(formulário) -->
+						</h:commandButton>
+					</h:column>
+				</h:dataTable>
+			</div>
+		</div>
+	</h:form>
+
+	<script src="resources/js/jquery-3.2.1.min.js" />
+	<script src="resources/js/bootstrap.min.js" />
+	<script src="resources/js/fontawesome-all.min.js" />
+	<script src="resources/js/main.js" />
+</h:body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>Academia Home</title>
+
+<!-- Bootstrap -->
+<link href="resources/css/bootstrap.min.css" rel="stylesheet" />
+<link href="resources/css/estilo.css" rel="stylesheet" />
+
+
+</head>
+<body data-spy="scroll" data-target=".navbaracademia" data-offset="30">
+	<nav class="navbar navbar-inverse navbar-inner navbar-fixed-top ">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#navbaracademia">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#apresentacao">Academia</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbaracademia "
+				id="navbaracademia">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a class="ul-fonte" href="#servicos">Serviços <span
+							class="sr-only">(current)</span></a></li>
+
+					<li><a class="ul-fonte" href="#quemsomos">Quem Somos</a></li>
+
+					<li><a class="ul-fonte" href="#localizacao">Localização</a></li>
+					
+					<li><a class="ul-fonte" href="/administracao.xhtml">Painel Administrativo</a></li>
+
+					<li class="dropdown"><a href="#login" class="dropdown-toggle"
+						data-toggle="dropdown" role="group" aria-haspopup="true"
+						aria-expanded="true"> <i class="fas fa-user fa-lg"></i>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item ul-fonte" href="login.html">Fazer
+									Login</a></li>
+							
+							<li><a class="dropdown-item" href="#">Something else
+									here</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a class="dropdown-item">
+								<!--  	<form th:action="@{/logout}" method="post"> -->
+										<button type="submit">Logout</button>
+								
+							</a></li>
+							<li><a class="dropdown-item" href="#">Something else
+									here</a></li>
+
+						</ul></li>
+				</ul>
+
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+	<!-- INICIO DA APRESENTAÇÃO-->
+	<section id="apresentacao"
+		class="img-responsive div_colorida hidden-xs">
+		<div class="container">
+			<div class="col-lg-12 col-xs-12"></div>
+		</div>
+	</section>
+
+	<!-- /FIM DA APRESENTAÇÃO-->
+
+	<!-- SERVIÇOS-->
+	<section id="servicos">
+		<div class="container">
+			<div class="col-xs-12 col-sm-12 col-lg-12">
+				<div class="row">
+					<div class="page-header">
+						<h1>Serviços</h1>
+					</div>
+				</div>
+				<div class="row servicos">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<div class="col-sm-6 col-md-6 col-lg-6 pull-right">
+							<img src="resources/imgs/servicos/Musculacao.jpg"
+								class="img-responsive img-circle" alt="musculacao" />
+						</div>
+						<div class="col-sm-6 col-md-6 col-lg-6">
+							<h2>Musculação</h2>
+							<p class="text-left">O treinamento de força, para o
+								treinamento e desenvolvimento dos músculos esqueléticos. Utiliza
+								a força da gravidade e a resistência gerada por equipamentos,
+								elásticos e molas para opor forças aos músculos que, por sua
+								vez, devem gerar força oposta através de contrações musculares
+								que podem ser concêntricas, excêntricas e isométricas.</p>
+
+
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<div class="col-sm-6 col-md-6 col-lg-6">
+							<img src="resources/imgs/servicos/CrosFit.jpg"
+								class="img-responsive img-circle" alt="crossfit" />
+						</div>
+						<div class="col-sm-6 col-md-6 col-lg-6" align="right">
+							<h2>CrossFit</h2>
+							<p class="text-right">CrossFit é uma modalidade de treino que
+								mistura ginástica olímpica, atletismo, disciplina militar e
+								outras, e tem conquistado espaço e alunos nas academias no
+								Brasil. O treino de alta intensidade trabalha a resistência
+								muscular, flexibilidade e coordenação motora, promovendo
+								resultados rápidos.</p>
+
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-xs-12" align="center">
+						<a href="servicos.html" type="button"
+							class="btn btn-default btn-sm btn-block"
+							alt="pagina de servicos academia">
+							<p class="p-fonte-botao">Clique e saiba mais</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- /FIM DO SERVIÇOS-->
+
+
+	<!-- QUEM SOMOS-->
+	<section id="quemsomos" class="div_fundo">
+		<div class="container">
+			<div class="col-xs-12 col-sm-12 col-lg-12">
+				<div class="row">
+					<div class="page-header">
+						<h1>Quem Somos</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- /FIM QUEM SOMOS-->
+
+
+
+	<!-- LOCALIZAÇÃO-->
+	<section id="localizacao">
+		<div class="container">
+			<div class="col-xs-12 col-sm-12 col-lg-12">
+				<div class="row">
+					<div class="page-header">
+						<h1>
+							Localização<small> Veja onde Estamos</small>
+						</h1>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15356.17437393867!2d-48.06744207872338!3d-15.801655224745922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a336ac328ae1f%3A0xea5a3d2258cdd14f!2sTaguatinga+Norte+-+Taguatinga%2C+Bras%C3%ADlia+-+DF%2C+70297-400!5e0!3m2!1spt-BR!2sbr!4v1517541905719"
+								width="100%" height="488" style="border: 0"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- /FIM DA LOCALIZAÇÃO-->
+
+	<!--INICIO FOOTER -->
+	<footer>
+		<div class="container">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+
+					<ul>
+						<li><a class="" href="#">Regras de Uso</a></li>
+						<br></br>
+						<li><a class="" href="#">Politícia de Privacidade</a></li>
+						<br></br>
+						<li><a class="" href="#">Patrocinadores</a></li>
+						<br></br>
+						<li><a class="" href="#">Aplicações e mais</a></li>
+
+					</ul>
+				</div>
+
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<ul>
+						<li><a>Redes Socias:</a></li>
+						<br></br>
+						<li><a class="" href="#"><i
+								class="fab fa-facebook-square fa-2x"></i> Facebook</a></li>
+						<li><a class="" href="#"><i
+								class="fab fa-instagram fa-2x"></i> Instagram</a></li>
+						<li><a class="" href="#"><i class="fab fa-twitter fa-2x"></i>
+								Twitter</a></li>
+
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-5 col-md-5 col-lg-4">
+					<div class="thumbnail">
+						<img src="resources/imgs/developers.jpg"
+							class="img-resposive img-rounded" />
+						<div class="caption">
+							<h4 align="center">
+								Desenvolvedores: <small> <br></br> <a
+									href="https://www.linkedin.com/in/daniel-paulino-mesquita">Daniel
+										Paulino Mesquita</a> <br></br> <a>Julio Cesar Rezende</a>
+								</small>
+							</h4>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+
+	<!--/fim contatos -->
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="resources/js/bootstrap.min.js"></script>
+	<script src="resources/js/fontawesome-all.min.js"></script>
+	<!--ICONES do BOOTS -->
+	<script src="resources/js/main.js"></script>
+</body>
+</html>

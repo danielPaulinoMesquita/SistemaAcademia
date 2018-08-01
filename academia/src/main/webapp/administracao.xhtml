@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<h:outputStylesheet library="css" name="bootstrap.min.css" />
+	<h:outputStylesheet library="css" name="formulario.css" />
+	<title>Painel Administrativo</title>
+
+</h:head>
+<h:body>
+	<!-- INicio da NAVBAR -->
+	<div class="navbar navbar-inverse navbar-inner navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display/ toggle faz agrupamento do menu para ser vizualizado no celular-->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/inicio">Academia</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false"><i class="fas fa-user fa-lg"></i> <span
+							class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Minha Conta</a></li>
+							<li><a href="#">Trocar Senha</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Efetuar LogOff</a></li>
+						</ul></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</div>
+	<!-- / FIM DA NAVBAR -->
+	<!--Menu da aplicação -->
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="col-sm-3">
+				<!-- menu avegação lateral-->
+				<div class="panel panel-info">
+					<div id="colGroup" role="tab" class="panel-heading">
+						<h4 class="panel-title">
+							<a href="#colListGroup1" aria-controls="colListGroup1"
+								aria-expanded="true" data-toggle="collapse"><i
+								class="fas fa-child fa-2x"></i> CLIENTES </a>
+						</h4>
+					</div>
+					<div role="tabpanel" class="panel-collapse collapse"
+						id="colListGroup1" aria-expanded="false">
+						<ul class="list-group">
+							<li class="list-group-item"><a href="cliente.xhtml">
+									Gerenciar Cliente </a></li>
+							<li class="list-group-item"><a href="mensalidade.xhtml"> Ver Mensalidades</a></li>
+						</ul>
+						<div class="panel-footer"></div>
+					</div>
+
+				</div>
+				<div class="panel panel-primary">
+					<div id="colGroup" role="tab" class="panel-heading">
+
+						<h4 class="panel-title">
+							<a href="#colListGroup2" aria-controls="colListGroup2"
+								aria-expanded="false" data-toggle="collapse"> <i
+								class="fas fa-newspaper fa-2x"></i> MEDIDAS
+							</a>
+						</h4>
+					</div>
+
+					<div role="tabpanel" class="panel-collapse collapse"
+						id="colListGroup2" aria-expanded="false">
+						<ul class="list-group">
+							<li class="list-group-item"><a href="medidas.xhtml">Perímetros</a></li>
+							<li class="list-group-item"><a href="dobracutanea.xhtml"> Dobras Cutaneas</a></li>
+							
+						</ul>
+						<div class="panel-footer"></div>
+					</div>
+				</div>
+
+			</div>
+			<!-- Fim do menu lateral -->
+
+		</div>
+		<div class="col-sm-9">
+			<div class="conteudo_painel">
+				<div class="conteudo_painel_int">
+					<ul class="nav nav-pills" role="tablist">
+						<li class="active"><a href="#">Mensagens<span class="badge">10</span></a></li>
+						<li class=""><a href="#">Avisos<span class="badge">10</span></a></li>
+					
+					</ul>
+					<hr />
+					<div class="jumbotron">
+						<h3>Seja Bem-Vindo usuário!</h3>
+						<p>Utilize o menu ao lado para acessar as áreas do painel!</p>
+					</div>
+					<div class="page-header">
+						<h3>Avisos:</h3>
+					</div>
+					<div class="alert alert-success">
+						<strong>Parabéns!!</strong> Você foi recomendado.
+					</div>
+					<div class="alert alert-warning">
+						<strong>Atenção!!</strong> Você tem até o dia 01/01/1000 para
+						ajustar sua férias.
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<h3>Minhas Tarefas</h3>
+							<ul>
+								<li>Ligar para fulano</li>
+								<li>retornar o email fulano</li>
+								<li>Outra tarefa</li>
+
+							</ul>
+							<a href="#" class="btn btn-primary btn-block">Adicionar
+								Tarefa</a>
+						</div>
+						<div class="col-sm-4">
+							<h3>Minhas Tarefas</h3>
+							<ul>
+								<li>Ligar para fulano</li>
+								<li>retornar o email fulano</li>
+								<li>Outra tarefa</li>
+
+							</ul>
+							<a href="#" class="btn btn-primary btn-block">Adicionar
+								Tarefa</a>
+						</div>
+						<div class="col-sm-4">
+							<h3>Minhas Tarefas</h3>
+							<ul>
+								<li>Ligar para fulano</li>
+								<li>retornar o email fulano</li>
+								<li>Outra tarefa</li>
+
+							</ul>
+							<a href="#" class="btn btn-primary btn-block">Adicionar
+								Tarefa</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+	</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="resources/js/jquery-3.2.1.min.js"/>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="resources/js/bootstrap.min.js"></script>
+	<script src="resources/js/fontawesome-all.min.js" />
+	<script src="resources/js/main.js"></script>
+</h:body>
+</html>

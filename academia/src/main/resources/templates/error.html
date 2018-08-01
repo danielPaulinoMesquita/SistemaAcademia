@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Pagina ERROR</title>
+
+<!-- Bootstrap -->
+<link href="resources/css/bootstrap.min.css" rel="stylesheet" />
+<link href="resources/css/estilo.css" rel="stylesheet" />
+
+</head>
+<body>
+	<div class="page-header">
+		<h1>
+			OPA!! Error <small>404</small>
+		</h1>
+	</div>
+
+	<div class="container">
+		<div class="col-md-6 col-sm-6 col-xs-12">
+			<h1>Desculpe-nos</h1>
+			<a th:href="@{inicio}" class="btn btn-info">Voltar para Home</a>
+		</div>
+		<div class="col-md-6 col-sm-6 col-xs-12">
+			<div class="jumbotron">
+				<h2>Ops</h2>
+				<p>Desculpa! A pagina nao existe ou houve um erro na sua
+					requisicao.</p>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="resources/js/bootstrap.min.js"></script>
+	<script src="resources/js/fontawesome-all.min.js"></script>
+	<!--ICONES do BOOTS -->
+	<script src="resources/js/main.js"></script>
+</body>
+</html>

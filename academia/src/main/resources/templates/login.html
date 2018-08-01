@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>Academia Login</title>
+
+<!-- Bootstrap -->
+<link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="resources/css/estilo-login.css" rel="stylesheet"/>
+
+</head>
+<body data-spy="scroll" data-target=".navbaracademia" data-offset="30">
+	<nav class="navbar navbar-inverse navbar-inner navbar-fixed-top ">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="col-xs-12">
+			<div class="row navbar-right">
+				<a class="navbar-brand" th:href="@{inicio}" title="Pagina Inicial">
+					<label>INÍCIO <i class="fas fa-home fa-2x"></i>
+				</label>
+				</a>
+			</div>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+
+
+	</nav>
+	<!-- INICIO DA APRESENTAÇÃO-->
+
+	<section id="login1">
+
+		<div class="tela-fundo-login">
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="col-lg-12 col-xs-12">
+						<!-- <div th:if="${param.error}">
+							<div class="alert alert-danger">Usuário ou senha inválidos!</div>
+						</div>
+						 -->
+						<div class="form-login">
+							<div class="page-header">
+								<h2>Efetue o Login</h2>
+							</div>
+							<form class="form-label form-horizontal" method="post"
+								th:action="@{/login}">
+								<div class="form-group">
+									<label class="control-label col-xs-12 col-lg-3" for="inputUser">Nome</label>
+									<div class="col-xs-12 col-lg-9">
+										<input class="form-control input-lg" type="text"
+											name="username" placeholder=" usuario" />
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="control-label col-xs-12 col-lg-3" for="inputUser">Senha</label>
+									<div class="col-xs-12 col-lg-9">
+										<input class="form-control input-lg" type="password"
+											name="password" placeholder=" senha" />
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-xs-12 col-sm-12 col-lg-12">
+										<input type="submit" class="btn btn-primary pull-right"
+											name="acessar" value="Acessar" />
+									</div>
+								</div>
+								<div class="form-group borda">
+									<div class="col-xs-12 com-sm-6 col-lg-6">
+										<label> <a href="" class="label"><input
+												type="checkbox" value="s" class="checkbox-inline" />
+												Lembrar-me</a>
+										</label>
+									</div>
+									<div class="col-xs-12 col-sm-6 col-lg-6">
+										<label> <a href="" class="label">Esqueceu a Senha?</a>
+										</label>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- APRESENTAÇAO MOBILE -->
+
+
+
+
+	<!-- /FIM DA APRESENTAÇÃO-->
+
+	<!-- SERVIÇOS-->
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="resources/js/bootstrap.min.js"></script>
+	<script src="resources/js/fontawesome-all.min.js"></script>
+	<script src="resources/js/main.js"></script>
+</body>
+</html>
