@@ -39,7 +39,7 @@ public class Mensalidade implements Serializable {
 		this.cliente = cliente;
 	}
 
-	public void mesesContratado(int mes, boolean pagamento) {
+	public void mesesContratado(int mes, boolean pagamento, Cliente clienteEmQuestao) {
 		Calendar dataRecebida; // Data para adicionar meses do contrato
 		this.dataContrato = Calendar.getInstance();// Settando o dia e mês inicial contratado
 
@@ -48,6 +48,7 @@ public class Mensalidade implements Serializable {
 		if(mes>0)
 		dataRecebida.add(Calendar.MONTH, mes);
 
+		setCliente(clienteEmQuestao);
 		setDataContrato(dataContrato);
 
 		setPago(pagamento);// Settando a situação de pagamento do mês vigente

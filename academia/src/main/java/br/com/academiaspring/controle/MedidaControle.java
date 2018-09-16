@@ -86,7 +86,7 @@ public class MedidaControle {
 			medidaEscolhida.calcularMassa();
 			return "avaliacaofisica";
 		} catch (Exception ex) {
-			setMensagem("ERROR!!Não encontrado as medidas de perimetro\nCliente em questão precisa de uma avaliação");
+			setMensagem("ERROR!!Não encontrado as medidas de perimetro");
 			return "medidas";
 		}
 	}

@@ -43,13 +43,13 @@ public class MensalidadeControle {
 			if (mes == 0 || modoEdicao) {
 				mensalidade.setPago(pagamento);
 				mensalidadeDao.save(mensalidade);
-				JSFMensageiro.info("atualizado com Sucesso");
-				this.modoEdicao = false;
-
+				setModoEdicao(false);
+				mensalidade = new Mensalidade();
+				setMensalidades(this.mensalidadeDao.buscaMensalidadesPorCliente(cliente.getMatricula()));
 			} else {
 				for (int i = 1; i <= mes; i++) {
 					this.mensalidade = new Mensalidade();
-					this.mensalidade.mesesContratado(i, pagamento);// Método Responsável por criar objeto(Mensalidade)
+					this.mensalidade.mesesContratado(i, pagamento,getCliente());// Método Responsável por criar objeto(Mensalidade)
 					if (mensalidade.getDataContrato() != null) {
 						mensalidadeDao.save(mensalidade);
 						this.mensalidades.add(mensalidade);
@@ -60,13 +60,14 @@ public class MensalidadeControle {
 
 				}
 				mes=0;
+				
 			}
 		} catch (Exception ex) {
 			JSFMensageiro.error("ERRO!!  na hora de Cadastrar");
+			
 		}
 
-		this.modoEdicao = false;
-		mensalidade = new Mensalidade();
+		
 
 	}
 

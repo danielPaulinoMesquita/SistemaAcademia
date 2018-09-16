@@ -83,7 +83,7 @@ public class DobraCutaneaControle {
 			return "avaliacaodobrascutaneas";
 		} catch (Exception ex) {
 			setMensagem(
-					"ERROR!!Não encontrado medidas das dobras cutaneas\nCliente em questão precisa de uma avaliação");
+					"ERROR !! Não encontrado medidas das dobras cutaneas.");
 			return "dobracutanea";
 		}
 	}

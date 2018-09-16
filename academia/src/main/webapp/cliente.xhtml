@@ -159,8 +159,7 @@
 							</f:facet>
 							<h:dataTable value="#{cliente.mensalidades}" var="mes">
 								<h:column>
-									<h:outputLabel value="#{mes.dataContrato}" />
-									<h:outputLabel value="#{mes.dataTermino}" />
+									<h:outputLabel value="#{mes.dataContratoTexto}" />
 								</h:column>
 							</h:dataTable>
 						</h:column>
@@ -191,7 +190,7 @@
 								style="max-width: 60px; max-height: 60px;">
 								<f:setPropertyActionListener value="#{cliente}"
 									target="#{medidaControle.cliente}" />
-								<f:ajax render="frmCliente" />
+								
 
 								<!-- Atualizar pagina(formulário) -->
 							</h:commandButton>

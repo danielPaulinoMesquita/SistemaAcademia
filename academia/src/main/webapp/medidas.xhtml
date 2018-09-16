@@ -54,20 +54,16 @@
 	</div>
 	<!-- / FIM DA NAVBAR -->
 
-	<h:messages layout="table" errorStyle="color: red"
-		infoStyle="color: green" warnStyle="color: orange"
-		fatalStyle="color: gray" showSummary="false" showDetail="true" />
 
+	<h1>Perímetros</h1>
 	<div class="container">
-		<h1>Perímetros</h1>
 		<h:form id="frmMedida" class="formulario">
 			<div class="form-group pull-right">
 				<h:outputText rendered="#{medidaControle.mensagem!=null}"
-					class="alert alert-info "
-					value="#{medidaControle.mensagem}" />
+					class="alert alert-info" value="#{medidaControle.mensagem}" />
 			</div>
-			<div class="col-xs-12 col-lg-12">
-				<div class="col-xs-12 col-lg-6">
+			<div class="col-xs-12 col-sm-12 col-lg-12">
+				<div class="col-xs-12 col-sm-6 col-lg-6">
 					<div class="form-group">
 						<h:outputLabel value="Estatura" />
 						<h:inputText class="form-control"
@@ -115,7 +111,7 @@
 					</div>
 				</div>
 
-				<div class="col-xs-12 col-lg-6">
+				<div class="col-xs-12 col-sm-6 col-lg-6">
 					<div class="form-group">
 						<h:outputLabel value="Panturrilha Direita" />
 						<h:inputText class="form-control"

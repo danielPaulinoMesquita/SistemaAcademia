@@ -1,5 +1,5 @@
 package br.com.academiaspring.security;
-/*
+
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -11,12 +11,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.
-		authorizeRequests().antMatchers("/resources/**")
-			.permitAll()
+		authorizeRequests().antMatchers("/resources/**").permitAll()
 			.anyRequest()
 			.authenticated()
-			.and().
-		formLogin()
+			.and()
+			.csrf()
+			.disable()
+		.formLogin()
 			.loginPage("/login")
 			.permitAll()
 			.and()
@@ -25,4 +26,3 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	}
 	//antMatchers("/webjars/**").permitAll()
 }
-*/
