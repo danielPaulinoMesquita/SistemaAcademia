@@ -1,5 +1,5 @@
 # SISTEMA ACADEMIA
-Sistema de academia, programado em java utilizando Framework Spring Boot
+  Sistema tem funcionalidades básicas para o gerenciamento e controle dos clientes, pode se considerar um sistema em fase beta. O sistema tem como objetivo ajudar programadores iniciantes que venha ter alguma dúvida no desenvolvimento de um sistema Web.
 
 ## FUNCIONALIDADES
   
@@ -14,6 +14,7 @@ Sistema de academia, programado em java utilizando Framework Spring Boot
 ![clientes](https://user-images.githubusercontent.com/30932457/45644448-21cfe900-ba94-11e8-8a2a-776cca1538f3.jpg)
 
 **Mensalidade**
+![mensalidade](https://user-images.githubusercontent.com/30932457/45644591-75423700-ba94-11e8-8dd9-5be1b8e1a791.jpg)
 
 **Perimetros**
 ![perimetros](https://user-images.githubusercontent.com/30932457/45644386-0664de00-ba94-11e8-84c7-83469a3e62ac.jpg)
@@ -25,3 +26,4 @@ Sistema de academia, programado em java utilizando Framework Spring Boot
 ![relatorio_perimetro](https://user-images.githubusercontent.com/30932457/45644519-47f58900-ba94-11e8-8668-ff667c997da9.jpg)
 
 **Relatório %Gordura**
+![relatorio_gordura](https://user-images.githubusercontent.com/30932457/45644603-7d01db80-ba94-11e8-8b19-ade87b66c21b.jpg)
