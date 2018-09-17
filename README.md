@@ -1,7 +1,10 @@
 # SISTEMA ACADEMIA
-  Sistema tem funcionalidades básicas para o gerenciamento e controle dos clientes, pode se considerar um sistema em fase beta. O sistema tem como objetivo ajudar programadores iniciantes que venha ter alguma dúvida no desenvolvimento de um sistema Web.
+ O sistema tem funcionalidades básicas para o gerenciamento e controle de uma academia, pode se considerar um sistema em fase beta. O sistema tem como objetivo ajudar programadores iniciantes que venha ter alguma dúvida no desenvolvimento de um sistema Web.
 
 ## FUNCIONALIDADES
+
+<h5>CRUD:</h5> Clientes, Mensalidade, Medidas de Perimetro, Medidas das Dobras Cutaneas
+<h5>RELATÓRIOS:</h5> Percentual de Gordura, Peso Ideal, IMC
   
 ## TELAS
 **Home**
