@@ -1,11 +1,19 @@
 # SISTEMA ACADEMIA
- O sistema tem funcionalidades básicas para o gerenciamento e controle de uma academia, pode se considerar um sistema em fase beta. O sistema tem como objetivo ajudar programadores iniciantes que venha ter alguma dúvida no desenvolvimento de um sistema Web.
+ O sistema tem funcionalidades básicas para o gerenciamento e controle de uma academia, pode se considerar um sistema em fase beta. O sistema tem como objetivo ajudar programadores iniciantes que venha ter alguma dúvida no desenvolvimento de um sistema Web.  
+
+|Tecnologias usadas:      | |
+|:-----------------------:|:--------------------------------------:|
+|Sring Boot         |JPA         | Readme/Github|
+|Spring Security       |MySql|-|
+|JoinFaces |BootStrap 3  |-|
+|Thymeleaf |CSS  |-|
+|JSF | JavaScript |-|
+
 
 ## FUNCIONALIDADES
 
 <h5>CRUD:</h5> Clientes, Mensalidade, Medidas de Perimetro, Medidas das Dobras Cutaneas
 <h5>RELATÓRIOS:</h5> Percentual de Gordura, Peso Ideal, IMC
-
   
 ## TELAS
 **Home**
