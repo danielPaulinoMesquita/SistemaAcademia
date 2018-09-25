@@ -3,7 +3,9 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
-	 xmlns:th="http://www.thymeleaf.org">
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 
 <h:head>
 	<h:outputStylesheet library="css" name="bootstrap.min.css" />
@@ -77,7 +79,7 @@
 					</div>
 
 				</div>
-				<div class="panel panel-primary">
+				<div  class="panel panel-primary">
 					<div id="colGroup" role="tab" class="panel-heading">
 
 						<h4 class="panel-title">
@@ -91,7 +93,8 @@
 					<div role="tabpanel" class="panel-collapse collapse"
 						id="colListGroup2" aria-expanded="false">
 						<ul class="list-group">
-							<li class="list-group-item"><a href="medidas.xhtml">Perímetros</a></li>
+							<li sec:authorize="hasRole('ALUNO')" class="list-group-item"><a href="medidas.xhtml" 
+							>Perímetros</a></li>
 							<li class="list-group-item"><a href="dobracutanea.xhtml"> Dobras Cutaneas</a></li>
 							
 						</ul>

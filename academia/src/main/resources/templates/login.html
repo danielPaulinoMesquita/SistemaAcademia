@@ -8,8 +8,8 @@
 <title>Academia Login</title>
 
 <!-- Bootstrap -->
-<link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="resources/css/estilo-login.css" rel="stylesheet"/>
+<link href="resources/css/bootstrap.min.css" rel="stylesheet" />
+<link href="resources/css/estilo-login.css" rel="stylesheet" />
 
 </head>
 <body data-spy="scroll" data-target=".navbaracademia" data-offset="30">
@@ -17,7 +17,7 @@
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="col-xs-12">
 			<div class="row navbar-right">
-				<a class="navbar-brand" th:href="@{inicio}" title="Pagina Inicial">
+				<a class="navbar-brand" th:href="@{/}" title="Pagina Inicial">
 					<label>INÍCIO <i class="fas fa-home fa-2x"></i>
 				</label>
 				</a>
@@ -35,10 +35,7 @@
 			<div class="container-fluid">
 				<div class="row-fluid">
 					<div class="col-lg-12 col-xs-12">
-						<!-- <div th:if="${param.error}">
-							<div class="alert alert-danger">Usuário ou senha inválidos!</div>
-						</div>
-						 -->
+
 						<div class="form-login">
 							<div class="page-header">
 								<h2>Efetue o Login</h2>
@@ -77,6 +74,14 @@
 										<label> <a href="" class="label">Esqueceu a Senha?</a>
 										</label>
 									</div>
+									<div class="col-lg-12 col-xs-12">
+										<div th:if="${param.error}">
+											<div class="alert alert-danger">Usuário ou senha
+												inválidos!</div>
+										</div>
+										
+									</div>
+
 								</div>
 							</form>
 						</div>
