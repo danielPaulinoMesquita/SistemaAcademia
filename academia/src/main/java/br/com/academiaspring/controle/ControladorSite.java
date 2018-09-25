@@ -26,11 +26,7 @@ public class ControladorSite {
 		return "medidas";
 	}
 	
-	@GetMapping("/cliente")
-	public String cliente() {
-		return "webapp/cliente";
-	}
-	
+
 	@GetMapping("/login")
 	public String login() {
 		return "login";

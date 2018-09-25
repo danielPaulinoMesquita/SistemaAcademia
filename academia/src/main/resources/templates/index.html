@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 
 
 <head>
@@ -39,8 +41,9 @@
 					<li><a class="ul-fonte" href="#quemsomos">Quem Somos</a></li>
 
 					<li><a class="ul-fonte" href="#localizacao">Localização</a></li>
-					
-					<li><a class="ul-fonte" href="/administracao.xhtml">Painel Administrativo</a></li>
+
+					<li><a class="ul-fonte" sec:authorize="hasRole('ALUNO')"
+						href="/administracao.xhtml">Painel Administrativo</a></li>
 
 					<li class="dropdown"><a href="#login" class="dropdown-toggle"
 						data-toggle="dropdown" role="group" aria-haspopup="true"
@@ -49,14 +52,14 @@
 						<ul class="dropdown-menu">
 							<li><a class="dropdown-item ul-fonte" href="login.html">Fazer
 									Login</a></li>
-							
+
 							<li><a class="dropdown-item" href="#">Something else
 									here</a></li>
 							<li role="separator" class="divider"></li>
 							<li><a class="dropdown-item">
-								<!--  	<form th:action="@{/logout}" method="post"> -->
+									<form th:action="@{/logout}" method="post">
 										<button type="submit">Logout</button>
-								
+									</form>
 							</a></li>
 							<li><a class="dropdown-item" href="#">Something else
 									here</a></li>
